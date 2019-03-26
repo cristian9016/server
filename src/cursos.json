@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "nombre": "nodejs",
+        "descripcion": "Curso interactivo de nodejs",
+        "valor": "200000"
+    },
+    {
+        "id": "2",
+        "nombre": "Kotlin",
+        "descripcion": "Curso online de kotlin",
+        "valor": "500000"
+    },
+    {
+        "id": "3",
+        "nombre": "Java",
+        "descripcion": "Curso de java presencial",
+        "valor": "50000",
+        "intensidad": "15",
+        "modalidad": "virtual"
+    }
+]

@@ -1,0 +1,17 @@
+{{>header}}
+<h2>Crear un curso nuevo</h2>
+<form action="/crear" method="POST">
+<input type="number" name="id" placeholder="id" required/><br>
+<input type="text" name="nombre" placeholder="nombre" required/><br>
+<input type="text" name="descripcion" placeholder="descripcion" required/><br>
+<input type="number" name="valor" placeholder="valor" required/><br>
+<input type="number" name="intensidad" placeholder="Intensidad horaria"/><br>
+Modalidad:<br>
+<select name="modalidad">
+    <option value=''></option>
+    <option value='virtual'>Virtual</option>
+    <option value='presencial'>Presencial</option>
+</select><br><br>
+<button>Crear</button>
+</form>
+{{>footer}}
