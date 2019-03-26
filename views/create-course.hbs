@@ -6,6 +6,7 @@
 <input type="text" name="descripcion" placeholder="descripcion" required/><br>
 <input type="number" name="valor" placeholder="valor" required/><br>
 <input type="number" name="intensidad" placeholder="Intensidad horaria"/><br>
+<input type="hidden" name="estado" value="disponible"/>
 Modalidad:<br>
 <select name="modalidad">
     <option value=''></option>
@@ -14,4 +15,5 @@ Modalidad:<br>
 </select><br><br>
 <button>Crear</button>
 </form>
+{{mensaje}}
 {{>footer}}

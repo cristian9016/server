@@ -1,0 +1,9 @@
+{{>header}}
+<h2>Lista de cursos disponibles</h2>
+{{{obtenerCursos coord}}}
+<br>
+<form action="/crear" method="GET">
+    <button>Crear un curso</button>
+</form>
+{{mensaje}}
+{{>footer}}

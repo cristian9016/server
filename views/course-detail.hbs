@@ -1,0 +1,23 @@
+{{>header}}
+<h2>Detalle del curso</h2>
+<h4>Nombre: {{nombre}}</h4>
+<h4>Descripcion: {{descripcion}}</h4>
+<h4>Valor: {{valor}}</h4>
+<h4>Intensidad: {{intensidad}} Horas</h4>
+<h4>Modalidad: {{modalidad}}</h4>
+{{#ifCond coord}}
+<h2>Estudiantes matriculados</h2>
+<p>{{{obtenerInscritos id}}}</p>
+{{mensaje}}
+<form action='/cerrar-curso' method='GET'>
+    <input type="hidden" name="id" value="{{id}}" />
+    <button>Cerrar Curso</button>
+</form>
+{{else}}
+<form action='/registro' method='GET'>
+    <input type="hidden" name="id" value="{{id}}" />
+    <button>Matricularme</button>
+</form>
+{{/ifCond}}
+
+{{>footer}}

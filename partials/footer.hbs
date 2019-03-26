@@ -1,5 +1,12 @@
 </center>
 <footer>
-    <p>Todos los derechos reservados</p>
+    <p>
+        {{#ifCond coord}}
+        <a href="/">Soy Estudiante</a>
+        {{else}}
+        <a href="/coordinador">Soy Coordinador</a>
+        {{/ifCond}}
+        <br>Todos los derechos reservados
+    </p>
 </footer>
 </body>
