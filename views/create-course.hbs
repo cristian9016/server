@@ -1,19 +1,18 @@
 {{>header}}
-<h2>Crear un curso nuevo</h2>
-<form action="/crear" method="POST">
-<input type="number" name="id" placeholder="id" required/><br>
-<input type="text" name="nombre" placeholder="nombre" required/><br>
-<input type="text" name="descripcion" placeholder="descripcion" required/><br>
-<input type="number" name="valor" placeholder="valor" required/><br>
-<input type="number" name="intensidad" placeholder="Intensidad horaria"/><br>
-<input type="hidden" name="estado" value="disponible"/>
-Modalidad:<br>
-<select name="modalidad">
-    <option value=''></option>
+<h2>Crear un curso nuevo</h2><br>
+<form action="/crear" method="POST" class="col-4">
+<input class="form-control" type="number" name="id" placeholder="id" required/><br>
+<input class="form-control" type="text" name="nombre" placeholder="nombre" required/><br>
+<input class="form-control" type="text" name="descripcion" placeholder="descripcion" required/><br>
+<input class="form-control" type="number" name="valor" placeholder="valor" required/><br>
+<input class="form-control" type="number" name="intensidad" placeholder="Intensidad horaria"/><br>
+<input class="form-control" type="hidden" name="estado" value="disponible"/>
+<select class="form-control" name="modalidad">
+    <option value=''>Modalidad</option>
     <option value='virtual'>Virtual</option>
     <option value='presencial'>Presencial</option>
 </select><br><br>
-<button>Crear</button>
+<button class="btn btn-primary col-4">Crear</button>
 </form>
-{{mensaje}}
+<h5 class="message">{{mensaje}}</h5> 
 {{>footer}}

@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const port = 8080;
 require('./helpers');
+const dirNode_modules = path.join(__dirname , '../node_modules');
 
 let cursos = [];
 
@@ -14,6 +15,13 @@ let partialsDirectory = path.join(__dirname, '../partials');
 app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({ extended: false }));
 hbs.registerPartials(partialsDirectory);
+
+
+app.use('/css', express.static(dirNode_modules + '/bootstrap/dist/css'));
+app.use('/js', express.static(dirNode_modules + '/jquery/dist'));
+app.use('/js', express.static(dirNode_modules + '/popper.js/dist'));
+
+app.use('/js', express.static(dirNode_modules + '/bootstrap/dist/js'));
 
 app.get('/', (req, res) => {
     let msg = req.query.success ? 'Matriculado correctamente' : '';
@@ -36,7 +44,7 @@ app.get('/crear', (req, res) => {
     }
 
 });
-
+ 
 app.post('/crear', (req, res) => {
     let curso = req.body;
     try {
@@ -82,14 +90,12 @@ app.get('/registro', (req, res) => {
         id: id
     });
 });
-
+ 
 app.post('/registro', (req, res) => {
     let estudiante = req.body;
     cursos = require('./cursos.json');
     let curso = cursos.find(cur => cur.id == estudiante.id);
-    console.log(curso);
     let est = curso.matriculados.find(est => est.identificacion == estudiante.identificacion);
-    console.log(curso.matriculados);
     if (!est) {
         curso.matriculados.push(estudiante);
         cursos[curso] = curso;

@@ -8,15 +8,15 @@
 {{#ifCond coord}}
 <h2>Estudiantes matriculados</h2>
 <p>{{{obtenerInscritos id}}}</p>
-{{mensaje}}
+<h5 class="message">{{mensaje}}</h5> 
 <form action='/cerrar-curso' method='GET'>
     <input type="hidden" name="id" value="{{id}}" />
-    <button>Cerrar Curso</button>
+    <button class="btn btn-danger col-3">Cerrar Curso</button>
 </form>
 {{else}}
 <form action='/registro' method='GET'>
     <input type="hidden" name="id" value="{{id}}" />
-    <button>Matricularme</button>
+    <button class="btn btn-success">Matricularme</button>
 </form>
 {{/ifCond}}
 

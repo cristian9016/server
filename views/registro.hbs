@@ -1,12 +1,14 @@
 {{>header}}
-<h2>Registrarse a un curso</h2>
-<form action="/registro" method="POST">
-<input type="number" name="identificacion" placeholder="Numero de identificacion" required/><br>
-<input type="text" name="nombre" placeholder="nombre" required/><br>
-<input type="text" name="correo" placeholder="correo" required/><br>
-<input type="number" name="telefono" placeholder="telefono" required/><br>
-<input type="hidden" name="id" value="{{id}}"/><br>
-<button>Matricular</button>
+<h2>Registrarse a un curso</h2><br>
+<form action="/registro" method="POST" class="col-4">
+    <input class="form-control" type="number" name="identificacion" placeholder="Numero de identificacion"
+        required /><br>
+    <input class="form-control" type="text" name="nombre" placeholder="nombre" required /><br>
+    <input class="form-control" type="text" name="correo" placeholder="correo" required /><br>
+    <input class="form-control" type="number" name="telefono" placeholder="telefono" required /><br>
+    <input class="form-control" type="hidden" name="id" value="{{id}}" /><br>
+    <button class="btn btn-success">Matricular</button>
 </form>
-{{mensaje}}
+<h5 class="message">{{mensaje}}</h5> 
+
 {{>footer}}
