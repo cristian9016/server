@@ -1,10 +1,14 @@
 {{>header}}
-<h2>Detalle del curso</h2>
-<h4>Nombre: {{nombre}}</h4>
-<h4>Descripcion: {{descripcion}}</h4>
-<h4>Valor: {{valor}}</h4>
-<h4>Intensidad: {{intensidad}} Horas</h4>
-<h4>Modalidad: {{modalidad}}</h4>
+<table class="table col-4">
+<thead><th colspan="2"><center>Detalle del curso</center></th></thead>
+<tbody>
+<tr><td><center>Nombre:</center></td><td><center>{{nombre}}</center></td></tr>
+<tr><td><center>Descripcion:</center></td><td><center>{{descripcion}}</center></td></tr>
+<tr><td><center>Valor:</center></td><td><center>{{valor}}</center></td></tr>
+<tr><td><center>Intensidad:</center></td><td><center>{{intensidad}} Horas</center></td></tr>
+<tr><td><center>Modalidad:</center></td><td><center>{{modalidad}}</center></td></tr>
+</tbody>
+</table>
 {{#ifCond coord}}
 <h2>Estudiantes matriculados</h2>
 <p>{{{obtenerInscritos id}}}</p>
@@ -16,7 +20,7 @@
 {{else}}
 <form action='/registro' method='GET'>
     <input type="hidden" name="id" value="{{id}}" />
-    <button class="btn btn-success">Matricularme</button>
+    <button class="btn btn-success col-3">Matricularme</button>
 </form>
 {{/ifCond}}
 

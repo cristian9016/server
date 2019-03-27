@@ -7,21 +7,35 @@
     <!--Bootstrap css -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
     <style>
-        .message{
-            color:red;
+        .message {
+            color: red;
+        }
+
+        #wrap {
+            min-height: 100%;
+        }
+
+        #main {
+            overflow: auto;
+            padding-bottom: 150px;
+            /* this needs to be bigger than footer height*/
+        }
+
+        .footer {
+            position: relative;
+            margin-top: -150px;
+            /* negative value of footer height */
+            height: 150px;
+            clear: both;
+            padding-top: 20px;
         }
     </style>
     <title>
         Servidor
     </title>
 </head>
-<style>
-    .td {
-        text-align: center
-    }
-</style>
 
-<body bgcolor="#333">
+<body>
     <center>
         <h1>
             Bienvenido
