@@ -4,7 +4,7 @@ const hbs = require('hbs');
 const path = require('path');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const port = 8080;
+const port = process.env.PORT || 3000;
 require('./helpers');
 const dirNode_modules = path.join(__dirname , '../node_modules');
 
